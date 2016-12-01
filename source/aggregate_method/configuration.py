@@ -3,7 +3,7 @@ import os
 
 class Configuration:
 
-    SECRET_KEY = os.environ.get("AGGREGATE_METHOD_SECRET_KEY") or \
+    SECRET_KEY = os.environ.get("EMIS_AGGREGATE_METHOD_SECRET_KEY") or \
         "yabbadabbadoo!"
     JSON_AS_ASCII = False
 
