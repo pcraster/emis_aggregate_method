@@ -36,7 +36,7 @@ class DevelopmentConfiguration(Configuration):
 
 class TestingConfiguration(Configuration):
 
-    SERVER_NAME = os.environ.get("AGGREGATE_METHOD_SERVER_NAME") or \
+    SERVER_NAME = os.environ.get("EMIS_AGGREGATE_METHOD_SERVER_NAME") or \
         "localhost"
     TESTING = True
 
