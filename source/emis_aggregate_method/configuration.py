@@ -34,7 +34,7 @@ class DevelopmentConfiguration(Configuration):
         Debug(app)
 
 
-class TestingConfiguration(Configuration):
+class TestConfiguration(Configuration):
 
     SERVER_NAME = os.environ.get("EMIS_AGGREGATE_METHOD_SERVER_NAME") or \
         "localhost"
@@ -48,6 +48,7 @@ class ProductionConfiguration(Configuration):
 
 configuration = {
     "development": DevelopmentConfiguration,
-    "testing": TestingConfiguration,
+    "test": TestConfiguration,
+    "acceptance": ProductionConfiguration,
     "production": ProductionConfiguration
 }

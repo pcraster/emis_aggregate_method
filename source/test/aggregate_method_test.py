@@ -2,15 +2,15 @@ import os.path
 import unittest
 import uuid
 from flask import current_app, json
-from aggregate_method import create_app, db
-from aggregate_method.api.schema import *
+from emis_aggregate_method import create_app, db
+from emis_aggregate_method.api.schema import *
 
 
 class AggregateMethodTestCase(unittest.TestCase):
 
 
     def setUp(self):
-        self.app = create_app("testing")
+        self.app = create_app("test")
         self.app_context = self.app.app_context()
         self.app_context.push()
         self.client = self.app.test_client()

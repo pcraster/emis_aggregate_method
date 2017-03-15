@@ -1,15 +1,15 @@
 import datetime
 import unittest
 import uuid
-from aggregate_method import create_app
-from aggregate_method.api.schema import *
+from emis_aggregate_method import create_app
+from emis_aggregate_method.api.schema import *
 
 
 class AggregateMethodSchemaTestCase(unittest.TestCase):
 
 
     def setUp(self):
-        self.app = create_app("testing")
+        self.app = create_app("test")
 
         self.app_context = self.app.app_context()
         self.app_context.push()

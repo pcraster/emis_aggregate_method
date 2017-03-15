@@ -1,5 +1,3 @@
-import os
-os.environ["EMIS_AGGREGATE_METHOD_CONFIGURATION"] = "development"
 from server import app
 
 

@@ -1,5 +1,7 @@
 import os
-from aggregate_method import create_app
+from emis_aggregate_method import create_app
 
 
-app = create_app(os.getenv("EMIS_AGGREGATE_METHOD_CONFIGURATION"))
+os.environ["EMIS_CONFIGURATION"] = \
+    os.environ.get("EMIS_CONFIGURATION") or "production"
+app = create_app(os.getenv("EMIS_CONFIGURATION"))
