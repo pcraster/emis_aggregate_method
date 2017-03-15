@@ -36,9 +36,11 @@ class DevelopmentConfiguration(Configuration):
 
 class TestConfiguration(Configuration):
 
-    SERVER_NAME = os.environ.get("EMIS_AGGREGATE_METHOD_SERVER_NAME") or \
-        "localhost"
-    TESTING = True
+    # SERVER_NAME = os.environ.get("EMIS_AGGREGATE_METHOD_SERVER_NAME") or \
+    #     "localhost"
+    # TESTING = True
+
+    pass
 
 
 class ProductionConfiguration(Configuration):
